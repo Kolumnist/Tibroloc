@@ -4,9 +4,12 @@
 </head>
 
 <body>
-    <div style="text-align: center;">
+    <div id="startDiv" style="text-align: center;">
+        <button name="startButton" onclick="onclickInit()" class="button-slick font-config">START</button>
+    </div>
+    <div id="mainDiv" style="text-align: center;" hidden>
         <div>
-            <button name="mainButton" onclick="onclickToggle() " class="button-slick font-config">PAUSE</button>
+            <button name="mainButton" onclick="onclickToggle()" class="button-slick font-config">PAUSE</button>
         </div>
         <div>
             <h1 id="time" class="font-config">00:00:00</h1>
@@ -14,14 +17,37 @@
         <div>
             <button name="saveButton" onclick="onclickSave()" class="button-slick font-config">SAVE & END</button>
         </div>
-        <div>
-            <iframe id="file"
-                src="C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\dev\ClockInWeb\times.json" 
-                frameborder="0" 
-                height="80%" 
-                width="25%">
-            </iframe>
-        </div>
+
+    </div>
+    <div>
+        <details>
+            <summary>Worktime & Income</summary>
+            <table>
+                <caption>
+                    Income per time saved
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Start Date</th>
+                        <th scope="col">End Date</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Income</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="3">Full Income</th>
+                        <td id="fullIncome"></td>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </details>
+        <iframe id="file" src="C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\dev\ClockInWeb\times.json"
+            frameborder="0" height="80%" width="25%">
+        </iframe>
     </div>
 </body>
 
