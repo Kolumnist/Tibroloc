@@ -17,37 +17,32 @@
         <div>
             <button name="saveButton" onclick="onclickSave()" class="button-slick font-config">SAVE & END</button>
         </div>
-
-    </div>
-    <div>
         <details>
             <summary>Worktime & Income</summary>
-            <table>
-                <caption>
-                    Income per time saved
-                </caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Start Date</th>
-                        <th scope="col">End Date</th>
-                        <th scope="col">Time</th>
-                        <th scope="col">Income</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th scope="row" colspan="3">Full Income</th>
-                        <td id="fullIncome"></td>
-                    </tr>
-                </tfoot>
-            </table>
-
+            <div style="display: flex; justify-self: center;">
+                <table>
+                    <caption>
+                        Income per time saved
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Start Date</th>
+                            <th scope="col">End Date</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Income</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row" colspan="3">Full Income</th>
+                            <td id="fullIncome"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </details>
-        <iframe id="file" src="C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\dev\ClockInWeb\times.json"
-            frameborder="0" height="80%" width="25%">
-        </iframe>
     </div>
 </body>
 
