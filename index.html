@@ -4,19 +4,12 @@
 </head>
 
 <body>
-    <div id="startDiv" style="text-align: center;">
-        <button name="startButton" onclick="onclickInit()" class="button-slick font-config">START</button>
-    </div>
-    <div id="mainDiv" style="text-align: center;" hidden>
-        <div>
-            <button name="mainButton" onclick="onclickToggle()" class="button-slick font-config">PAUSE</button>
-        </div>
-        <div>
-            <h1 id="time" class="font-config">00:00:00</h1>
-        </div>
-        <div>
-            <button name="saveButton" onclick="onclickSave()" class="button-slick font-config">SAVE & END</button>
-        </div>
+    <div id="app-container">
+        <div id="time-display">00:00:00</div>
+        <button name="start-button" onclick="onclickInit()" class="button">Start</button>
+        <button name="control-button" onclick="onclickToggle()" class="button" hidden>Pause</button>
+        <button name="save-button" onclick="onclickSave()" class="button" hidden>Save & End</button>
+
         <details>
             <summary>Worktime & Income</summary>
             <div style="display: flex; justify-self: center;">

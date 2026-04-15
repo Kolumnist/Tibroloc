@@ -1,9 +1,10 @@
-const MAIN_BUTTON_NAMES = ["RESUME", "PAUSE"];
+const MAIN_BUTTON_NAMES = ["Resume", "Pause"];
 
-var _startDiv = document.getElementById("startDiv");
-var _mainDiv = document.getElementById("mainDiv");
-var _mainButton = document.getElementsByName("mainButton")[0];
-var _time = document.getElementById("time");
+var _startButton = document.getElementsByName("start-button")[0];
+var _controlButton = document.getElementsByName("control-button")[0];
+var _saveButton = document.getElementsByName("save-button")[0];
+
+var _time = document.getElementById("time-display");
 
 var _tableBody = document.getElementById("tableBody");
 var _fullIncome = document.getElementById("fullIncome");
@@ -47,8 +48,9 @@ async function onclickInit() {
         _fullIncome.innerText = fullIncome+"\u20ac";
         _tableBody.innerHTML = tableBodyContentString;
 
-        _startDiv.hidden = true;
-        _mainDiv.hidden = false;
+        _startButton.hidden = true;
+        _controlButton.hidden = false;
+        _saveButton.hidden = false;
 
         startDate = new Date().toLocaleDateString('de-DE', {
             day: '2-digit',
@@ -81,10 +83,10 @@ function onclickToggle() {
         intervalId = null;
         stopTimeInSeconds = new Date().getTime() / 1000;
 
-        _mainButton.textContent = MAIN_BUTTON_NAMES[0];
+        _controlButton.textContent = MAIN_BUTTON_NAMES[0];
     } else {
         intervalId ??= setInterval(setTime, 500);
-        _mainButton.textContent = MAIN_BUTTON_NAMES[1];
+        _controlButton.textContent = MAIN_BUTTON_NAMES[1];
         startTimeInSeconds += parseInt((new Date().getTime() / 1000) - stopTimeInSeconds);
     }
 }
